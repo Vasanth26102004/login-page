@@ -155,6 +155,7 @@ header{
 }
 
 .wrapper .iconclose:hover{
+    position: absolute;
     background: #fff;
     color: #162938;
     transition: 0.5s;
