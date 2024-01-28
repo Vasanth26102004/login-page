@@ -162,7 +162,14 @@ header{
 }
 
 .form-box h2{
-    font-size: 2em;
+    font-size: 3em;
+    color: 162938;
+    text-align: center;
+}
+
+.form-box h2 .page{
+    font-size: 3em;
+    outline-style: double;
     color: 162938;
     text-align: center;
 }
