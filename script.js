@@ -19,3 +19,39 @@ btnpopup.addEventListener('click',()=> {
 iconclose.addEventListener('click',()=> {
     wrapper.classList.remove('active-popup');
 });
+
+$(document).ready(function() {
+    $("register").click(function() {
+        
+        $.ajax({
+            url: 'db.php', 
+            type: 'POST', 
+            data: { action: 'rregister' }, 
+            success: function(response) {
+                // Handle the response from the PHP file
+                $("#message").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+
+$(document).ready(function() {
+    $("login").click(function() {
+        
+        $.ajax({
+            url: 'db.php', 
+            type: 'POST', 
+            data: { action: 'login' }, 
+            success: function(response) {
+                // Handle the response from the PHP file
+                $("#result").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
